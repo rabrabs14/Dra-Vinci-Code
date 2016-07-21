@@ -1,0 +1,28 @@
+#include <Servo.h>
+
+Servo leftServo;
+Servo rightServo;
+
+int posL = 0;
+int posR = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  leftServo.attach(10);
+  rightServo.attach(9);
+}
+
+void loop() {
+  leftServo.write(0);
+  rightServo.write(180);
+  delay(1000);
+  leftServo.write(180);
+  rightServo.write(0);
+  delay(1000);
+  leftServo.write(0);
+  rightServo.write(0);
+  delay(1000);
+  leftServo.write(90);
+  rightServo.write(90);
+  delay(1000);
+}
